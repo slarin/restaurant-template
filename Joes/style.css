@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+p{font-family:sans-serif !important;}
+header{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	height:11vh;
+	width:98vw;
+	position:fixed;
+	background-color:#FFFFFF;
+	top:0;
+	align-content:center;
+}
+#nav-bar{margin-right:5%;}
+#nav-bar ul{list-style-type:none;}
+#nav-bar li{
+	display:inline;
+	margin:4px;
+}
+#nav-bar li a{
+	text-decoration:none;
+	color:#FF3700;
+	padding:2px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+#nav-bar li a:hover{
+	color:#FFFFFF;
+	background-color:#FF3700;
+	border:1px solid #FF3700;
+	border-radius:0.5px;
+}
+#nav-bar li a:active{
+	border-bottom:thick #FF3700;
+}
+#why{
+	height:30vh;
+	text-align:center;
+}
+#why span{
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-size:56px;
+}
+#why p{font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;font-size:16px;}
+#services{
+	height:65vh;
+	text-align:center;
+}
+#services span{
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif; 
+	color:#FF3700; 
+	font-size:40px;
+}
+#service-chiefs{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-content:stretch;
+}
+#reach-joe{
+	height:65vh;
+	text-align:center;
+}
+.parallax_1{
+  background-image:url(images/Photo%20by%20Edgar%20Castrejon%20on%20Unsplash.png);
+  min-height: 98vh; 
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.parallax_2{
+  background-image:url(images/Photo%20by%20Petr%20Sevcovic%20on%20Unsplash.png);
+  min-height: 60vh; 
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.parallax_3{
+  background-image:url(images/Photo%20by%20STIL%20on%20Unsplash.png);
+  min-height: 25vh; 
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.cups{
+	width:27%;
+	text-align:center;
+	border-radius:3px;
+}
+.cups:hover{
+	border:1px solid #FF3700;
+}
+.tpc{
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:24px;
+	color:#E55C00;
+}
+.wrt{ font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.joe-contact{
+	font-family:serif;
+	font-size:65px;
+	color:#003A7F;
+}
+@media(max-width:700px){
+	#nav-bar{margin-right:auto;}
+	#services{height:auto;}
+	#service-chiefs{flex-direction:column; justify-content:center;}
+	.cups{width:auto;}
+}
+@media(max-width:380px){
+	header{height:14vh;}
+	#nav-bar li{margin:1px;}
+}

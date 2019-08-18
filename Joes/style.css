@@ -11,8 +11,17 @@ header{
 	background-color:#FFFFFF;
 	top:0;
 	align-content:center;
+	margin-bottom: 10px;
 }
-#nav-bar{margin-right:5%;}
+header > div:nth-child(1){
+	margin-left: 25px;
+}
+#logo-holder>img{
+	height: 30px;
+	width: 40px;
+	margin: 10px 10px;
+}
+#nav-bar{margin-right:5%; display:block;}
 #nav-bar ul{list-style-type:none;}
 #nav-bar li{
 	display:inline;
@@ -22,16 +31,18 @@ header{
 	text-decoration:none;
 	color:#FF3700;
 	padding:2px;
+	border-bottom-color: #FFFFFF;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	transition-property: border-bottom-color;
+	transition-duration: 1s;
 }
 #nav-bar li a:hover{
-	color:#FFFFFF;
-	background-color:#FF3700;
-	border:1px solid #FF3700;
-	border-radius:0.5px;
+	border: none;
+	border-bottom:2px solid #FF3700;
 }
 #nav-bar li a:active{
-	border-bottom:thick #FF3700;
+	border: none;
+	border-bottom:#FF3700;
 }
 #why{
 	height:30vh;
@@ -51,15 +62,36 @@ header{
 	color:#FF3700; 
 	font-size:40px;
 }
-#service-chiefs{
+.service-chiefs{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
-	align-content:stretch;
 }
 #reach-joe{
 	height:65vh;
 	text-align:center;
+	opacity: 1;
+}
+#server{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+#server > div{
+	opacity: 0;
+	border: none;
+	border-bottom: 1px solid #003A7F;
+	width: 30vw;
+}
+#server > div > p{
+	font-family: cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+	color: #E55C00;
+	font-size: 20px;
+}
+#server > div > img{
+	margin: 20px auto;
+	height: 40px;
+	width: 30px;
 }
 .parallax_1{
   background-image:url(images/Photo%20by%20Edgar%20Castrejon%20on%20Unsplash.png);
@@ -91,7 +123,8 @@ header{
 	border-radius:3px;
 }
 .cups:hover{
-	border:1px solid #FF3700;
+	border: none;
+	border-bottom:1px solid #FF3700;
 }
 .tpc{
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
@@ -104,11 +137,98 @@ header{
 	font-size:65px;
 	color:#003A7F;
 }
-@media(max-width:700px){
-	#nav-bar{margin-right:auto;}
+.contact{
+	animation-name: curtain;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+#mobile-nav-bar{
+	display: none;
+}
+#nav-div > span{
+	height:3px;
+	width: 25px;
+	background-color: #E55C00;
+	margin: 5px 0px;
+	display: block;
+} 
+#nav-div :active > span{
+	width: 15px;
+}
+#nav-links{
+	top: 8vh;
+	right: -50vh;
+	position: fixed;
+	background-color: white;
+	width: 150px;
+  transition: all 600ms;
+	height: auto;
+	/*animation-name: slide-right;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;*/
+}
+#nav-links.active{
+	right: 5px;
+} 
+#nav-links > ul{
+	list-style-type: none;
+	padding: 0px 5px;
+	text-align: center;
+}
+#nav-links > ul > li{
+	display: block;
+	color: whitesmoke;
+	border: 1px solid whitesmoke;
+	width: 100%;
+	margin: 5px 0px;
+	background-color: #E55C00;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*@keyframes slide-right{
+	0% {right: -60px;}
+	50% {right: 25px;}
+	100% {right: 15px;}
+}*/
+@keyframes curtain {
+	0% { margin-top: -150px;}
+	100% { margin-top: 0px; opacity: 1;
+		border-bottom: 3px solid #003A7F; 
+		border-radius: 1px;}
+}
+@media(max-width:770px){
+	header{
+		justify-content: space-around; 
+		align-content: center;
+		align-items: center;
+		margin: auto;
+	}
+	#mobile-nav-bar{display: block;}
+	#nav-bar{display: none;}
 	#services{height:auto;}
-	#service-chiefs{flex-direction:column; justify-content:center;}
-	.cups{width:auto;}
+	#server {
+		flex-direction: column;
+		margin: auto 30vw;
+		margin-bottom: 25px;
+	}
+	.service-chiefs{
+		flex-direction:column; 
+		justify-content:center;
+	}
+	.cups{
+		width:auto; 
+		margin: auto 40px;
+	}
+	.cups:hover{
+		border:none; 
+		border-radius: 0px;
+	}
+	header{
+		align-items: center;
+	}
+	#why > span{
+		font-size: 25px;
+	}
 }
 @media(max-width:380px){
 	header{height:14vh;}

@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joe's Kitchen</title>
 <link rel="stylesheet" href="style.css" type="text/css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
 <header>
-	<div id="logo-holder">
-    <p><i class='fas fa-bread-slice' style='font-size:35px;color:#FF3700;'></i></p>
+    <div id="logo-holder">
+    <img src="./images/sandwich.svg" />
     </div>
-    
+        
     <div id="nav-bar">
     <ul>
     <li><a href="#">Home</a></li>
@@ -22,6 +21,24 @@
     <li><a href="#">Reach Joe's</a></li>
     </ul> 
     </div>
+
+    <div id="mobile-nav-bar">
+        <div id="nav-div" onclick="pizaz()">
+            <span class="uno"></span>
+            <span class="uno"></span>
+            <span class="uno"></span>
+        </div>
+    </div>
+
+    <div id="nav-links">
+        <ul>
+            <li>Home</li>
+            <li>Why Joe's</li>
+            <li>Services</li>
+            <li>Reach Joe's</li>
+        </ul>
+    </div>
+    
 </header>
 
 <div id="main">
@@ -33,7 +50,7 @@
 <div id="services">
 <p><span>joe's  </span>services include</p>
 
-<div id="service-chiefs">
+<div class="service-chiefs">
 <div class="cups">
 <p class="tpc">Catering</p>
 <p class="wrt">Whether it's a small get-together or a royal banquet for that very special day, joe's got you covered.</p>
@@ -55,10 +72,20 @@ Give the word, and the halls of joe's, as well as our excellent chefs, are yours
 <div class="parallax_3"></div>
 <div id="reach-joe">
 <p class="joe-contact">Reach joe's</p>
+<div id="server">
+<div class="dish">
+    <img src="./images/twitter.svg"/>
+    <img src="./images/google.svg"/>
+    <img src="./images/facebook.svg"/>
+</div>
+<div class="dish">
+    <p>Grave 10, Sleepy Hollow, Dublin, Ireland.</p>
+    <div id="map"></div>
 </div>
 </div>
-<footer>
+</div>
+<footer></footer>
+<script src="./script.js"></script>
 
-</footer>
 </body>
 </html>

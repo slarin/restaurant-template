@@ -120,7 +120,10 @@ header > div:nth-child(1){
 .cups{
 	width:27%;
 	text-align:center;
-	border-radius:3px;
+	border-radius:none;
+	border-bottom-color: #FFFFFF;
+	transition: border-bottom-color ease-in-out 800ms;
+	cursor: pointer;
 }
 .cups:hover{
 	border: none;
@@ -139,7 +142,7 @@ header > div:nth-child(1){
 }
 .contact{
 	animation-name: curtain;
-	animation-duration: 2s;
+	animation-duration: 5s;
 	animation-fill-mode: forwards;
 }
 

@@ -13,16 +13,11 @@
     <img src="./images/sandwich.svg" />
     </div>
         
-    <div id="nav-bar">
-    <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#why">Why Joe's?</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Reach Joe's</a></li>
-    </ul> 
+    <div>
+        <p><a href="tel:0900-123-4466">0900-123-4466</a> | place an order</p> 
     </div>
 
-    <div id="mobile-nav-bar">
+    <!--<div id="mobile-nav-bar">
         <div id="nav-div" onclick="pizaz()">
             <span class="uno"></span>
             <span class="uno"></span>
@@ -37,18 +32,22 @@
             <li>Services</li>
             <li>Reach Joe's</li>
         </ul>
-    </div>
+    </div> -->
     
 </header>
 
 <div id="main">
-<div class="parallax_1"></div>
+<div class="parallax_1">
+    <div class="banner">
+        <p class="greeting">welcome to &ensp;<span class="brag">joe's</span></p>
+    </div>
+</div>
 <div id="why">
 <p><span>At joe's,</span> we have curated the perfect environment</p>
 </div>
 <div class="parallax_2"></div>
 <div id="services">
-<p><span>joe's  </span>services include</p>
+<p><span class="brag-txt">joe's  </span>services include</p>
 
 <div class="service-chiefs">
 <div class="cups">
@@ -78,13 +77,21 @@ Give the word, and the halls of joe's, as well as our excellent chefs, are yours
     <img src="./images/google.svg"/>
     <img src="./images/facebook.svg"/>
 </div>
-<div class="dish">
+<div class="dish flex-column">
+    <p class="title-sm">walk in</p>
     <p>Grave 10, Sleepy Hollow, Dublin, Ireland.</p>
     <div id="map"></div>
 </div>
+<div class="dish flex-column">
+    <p class="title-sm">place an order</p>
+    <p><a href="tel:0900-123-4466">0900-123-4466</a></p>
 </div>
 </div>
-<footer></footer>
+</div>
+
+<div class="footer">
+    <p>&copy <span id="year">2014</span> Joe's Kitchen</p>
+</div>
 <script src="./script.js"></script>
 
 </body>

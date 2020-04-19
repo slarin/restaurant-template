@@ -1,27 +1,36 @@
 @charset "utf-8";
 /* CSS Document */
-p{font-family:sans-serif !important;}
+body {
+	background-color: #FFFFFF;
+	background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+p{font-family:sans-serif;}
+
 header{
 	display:flex;
 	flex-direction:row;
-	justify-content:space-between;
+	justify-content: space-around;
 	height:11vh;
-	width:98vw;
+	width: 100%;
 	position:fixed;
 	background-color:#FFFFFF;
 	top:0;
-	align-content:center;
 	margin-bottom: 10px;
-}
-header > div:nth-child(1){
-	margin-left: 25px;
+	z-index: 2;
+	color: #E55C00;
 }
 #logo-holder>img{
 	height: 30px;
 	width: 40px;
 	margin: 10px 10px;
 }
-#nav-bar{margin-right:5%; display:block;}
+/*#nav-bar{margin-right:5%; display:block;}
 #nav-bar ul{list-style-type:none;}
 #nav-bar li{
 	display:inline;
@@ -43,7 +52,7 @@ header > div:nth-child(1){
 #nav-bar li a:active{
 	border: none;
 	border-bottom:#FF3700;
-}
+}*/
 #why{
 	height:30vh;
 	text-align:center;
@@ -57,7 +66,7 @@ header > div:nth-child(1){
 	height:65vh;
 	text-align:center;
 }
-#services span{
+.brag-txt{
 	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif; 
 	color:#FF3700; 
 	font-size:40px;
@@ -77,29 +86,54 @@ header > div:nth-child(1){
 	flex-flow: row nowrap;
 	justify-content: center;
 }
-#server > div{
-	opacity: 0;
-	border: none;
-	border-bottom: 1px solid #003A7F;
-	width: 30vw;
-}
-#server > div > p{
-	font-family: cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-	color: #E55C00;
-	font-size: 20px;
-}
 #server > div > img{
-	margin: 20px auto;
+	margin: 20px 5px;
 	height: 40px;
 	width: 30px;
 }
 .parallax_1{
-  background-image:url(images/Photo%20by%20Edgar%20Castrejon%20on%20Unsplash.png);
+  background-image:url(images/Photo%20by%20Edgar%20Castrejon%20on%20Unsplash.jpg);
   min-height: 98vh; 
   background-attachment:fixed;
   background-position:center;
   background-repeat:no-repeat;
-  background-size:cover;
+	background-size: 100% 100% !important;
+	display: flex;
+	align-items: center;
+}
+.banner{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	top: 10vh;
+	left: 5vw;
+	height: 60%;
+	width: 50%;
+	padding: 10px 0;
+	background-color: rgba(0, 0, 0, 0.63);
+	z-index: 1;
+	animation: scale-in-ver-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.greeting {
+	font-size: 2.0em;
+	color: rgba(255, 255, 255, 0.856);
+}
+.brag {
+	font-size: 2.0em;
+	color: #FF3700;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif !important;
+}
+@keyframes scale-in-ver-center {
+	0% {
+		transform: scaleY(0);
+		opacity: 1;
+	}
+	100% {
+			transform: scaleY(1);
+			opacity: 1;
+		}
 }
 .parallax_2{
   background-image:url(images/Photo%20by%20Petr%20Sevcovic%20on%20Unsplash.png);
@@ -142,8 +176,19 @@ header > div:nth-child(1){
 }
 .contact{
 	animation-name: curtain;
-	animation-duration: 5s;
+	animation-duration: 2s;
+	animation-direction: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 	animation-fill-mode: forwards;
+}
+@keyframes curtain {
+	0% { 
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% { 
+		transform: translateY(0); 
+		opacity: 1;
+	}
 }
 
 #mobile-nav-bar{
@@ -193,12 +238,35 @@ header > div:nth-child(1){
 	50% {right: 25px;}
 	100% {right: 15px;}
 }*/
-@keyframes curtain {
-	0% { margin-top: -150px;}
-	100% { margin-top: 0px; opacity: 1;
-		border-bottom: 3px solid #003A7F; 
-		border-radius: 1px;}
+
+.dish {
+	color: #003A7F;
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 3px 4px 12px 2px rgba(94, 97, 98, 0.431);
+	margin: 0 10px;
+	display: flex;
+	align-items: center;
+	padding: 0 4px;
 }
+.footer{
+	margin: 0 5vw;
+	align-self: center;
+	border:1px solid #060a0c;
+	border-radius:5px 5px 0px 0px;
+	background-color:#060a0c;
+	color: #E55C00;
+	text-align: center;
+}
+.flex-column {
+	display: flex !important;
+	flex-direction: column !important;
+}
+.title-sm {
+	font-size: 1.3em;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
 @media(max-width:770px){
 	header{
 		justify-content: space-around; 
@@ -210,9 +278,7 @@ header > div:nth-child(1){
 	#nav-bar{display: none;}
 	#services{height:auto;}
 	#server {
-		flex-direction: column;
-		margin: auto 30vw;
-		margin-bottom: 25px;
+		margin: auto;
 	}
 	.service-chiefs{
 		flex-direction:column; 
@@ -233,7 +299,28 @@ header > div:nth-child(1){
 		font-size: 25px;
 	}
 }
+@media(max-width:500px){
+	header { font-size: 0.8em;}
+	.dish {
+		height: 30vh;
+		width: 30%;
+		font-size: 0.8em;
+		align-items: center;
+		justify-content: center;
+	}
+	#server>div>img { 
+		height: 15px;
+		width: 20px; 
+	}
+	.banner {
+		width: 70%;
+		text-align: center;
+	}
+	.joe-contact {
+		font-size: 2.2em;
+	}
+}
 @media(max-width:380px){
 	header{height:14vh;}
-	#nav-bar li{margin:1px;}
+	.dish { font-size: 0.6em; }
 }

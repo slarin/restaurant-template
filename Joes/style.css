@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body {
 	background-color: #FFFFFF;
 	background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
@@ -10,7 +12,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-p{font-family:sans-serif;}
+p{font-family: 'Ubuntu', sans-serif;}
 
 header{
 	display:flex;
@@ -55,7 +57,10 @@ header{
 }*/
 #why{
 	height:30vh;
-	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 #why span{
 	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
@@ -77,22 +82,16 @@ header{
 	justify-content:space-around;
 }
 #reach-joe{
-	height:65vh;
+	height:70vh;
 	text-align:center;
-	opacity: 1;
 }
 #server{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 }
-#server > div > img{
-	margin: 20px 5px;
-	height: 40px;
-	width: 30px;
-}
 .parallax_1{
-  background-image:url(images/Photo%20by%20Edgar%20Castrejon%20on%20Unsplash.jpg);
+  background-image:url(images/08bOYnH_r_E_Full.jpg);
   min-height: 98vh; 
   background-attachment:fixed;
   background-position:center;
@@ -112,7 +111,7 @@ header{
 	height: 60%;
 	width: 50%;
 	padding: 10px 0;
-	background-color: rgba(0, 0, 0, 0.63);
+	background-color: rgba(0, 0, 0, 0.295);
 	z-index: 1;
 	animation: scale-in-ver-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -241,30 +240,50 @@ header{
 
 .dish {
 	color: #003A7F;
-	border-radius: 3px;
+	border-radius: 2px;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 3px 4px 12px 2px rgba(94, 97, 98, 0.431);
+	box-shadow: 3px 3px 6px 2px rgba(94, 97, 98, 0.431);
 	margin: 0 10px;
 	display: flex;
 	align-items: center;
 	padding: 0 4px;
+	font-weight: bold;
+	width: 25%;
+}
+.dish-head {
+	background-color: #003A7F;
+	color: #FFFFFF;
+	width: 100%;
+}
+.dish-details {
+	align-self: center;
+}
+.img-hldr {
+	display: flex;
+	flex-flow: row wrap;
 }
 .footer{
 	margin: 0 5vw;
 	align-self: center;
-	border:1px solid #060a0c;
+	border:1px solid transparent;
 	border-radius:5px 5px 0px 0px;
-	background-color:#060a0c;
-	color: #E55C00;
+	background-image: linear-gradient(147deg, #000000 0%, #292828 74%);
+	color: #ffffff;
 	text-align: center;
 }
 .flex-column {
 	display: flex !important;
 	flex-direction: column !important;
+	padding: 5px;
 }
 .title-sm {
-	font-size: 1.3em;
+	font-size: 0.8em;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+.tny-img {
+	margin: 20px 5px;
+	height: 40px;
+	width: 30px;
 }
 
 @media(max-width:770px){
@@ -277,9 +296,6 @@ header{
 	#mobile-nav-bar{display: block;}
 	#nav-bar{display: none;}
 	#services{height:auto;}
-	#server {
-		margin: auto;
-	}
 	.service-chiefs{
 		flex-direction:column; 
 		justify-content:center;
@@ -298,19 +314,22 @@ header{
 	#why > span{
 		font-size: 25px;
 	}
+	#reach-joe {
+		height: 50vh;
+	}
+	#services {
+		margin: 30px 0;
+	}
 }
 @media(max-width:500px){
 	header { font-size: 0.8em;}
 	.dish {
-		height: 30vh;
+		height: 20vh;
 		width: 30%;
 		font-size: 0.8em;
-		align-items: center;
-		justify-content: center;
 	}
-	#server>div>img { 
-		height: 15px;
-		width: 20px; 
+	#why {
+		margin: 0 10px;
 	}
 	.banner {
 		width: 70%;
@@ -318,6 +337,11 @@ header{
 	}
 	.joe-contact {
 		font-size: 2.2em;
+	}
+	.tny-img {
+		margin: 20px 5px;
+		height: 30px;
+		width: 15px;
 	}
 }
 @media(max-width:380px){
